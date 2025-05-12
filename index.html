@@ -27,31 +27,42 @@
     header {
       background: #0e1e2a;
       color: #fff;
-      padding: 40px 20px;
+      padding: 50px 20px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 20px;
+      flex-wrap: wrap;
+      position: relative;
     }
     .profile-pic {
-      width: 120px;
-      height: 120px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       overflow: hidden;
-      border: 3px solid #fff;
+      border: 5px solid #fff;
       flex-shrink: 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      z-index: 1;
+    }
+    .profile-pic:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
     }
     .profile-pic img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+    .header-text {
+      text-align: center;
+    }
     .header-text h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 10px;
     }
     .header-text p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       color: #ccc;
     }
     .container {
@@ -168,17 +179,17 @@
     @media (max-width: 768px) {
       header {
         flex-direction: column;
-        text-align: center;
+        padding: 30px 15px;
+      }
+      .profile-pic {
+        width: 130px;
+        height: 130px;
       }
       .header-text h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
       .header-text p {
         font-size: 1rem;
-      }
-      .profile-pic {
-        width: 100px;
-        height: 100px;
       }
       .container {
         padding: 15px;
@@ -189,6 +200,10 @@
       }
     }
     @media (max-width: 480px) {
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+      }
       .header-text h1 {
         font-size: 1.8rem;
       }
@@ -264,6 +279,7 @@
     </div>
 
     <div class="section comment-section">
+      <h2Cuba Libre
       <h2>Leave a Comment</h2>
       <form class="comment-form" onsubmit="addComment(event)">
         <div>
@@ -288,20 +304,20 @@
     // Set current year in footer
     document.getElementById('current-year').textContent = new Date().getFullYear();
 
-    // Escape HTML to prevent XSS
+    // Sanitize HTML input
     function escapeHTML(str) {
       return str.replace(/[&<>"']/g, function(match) {
         return {
-          '&': '&amp;',
-          '<': '&lt;',
-          '>': '&gt;',
-          '"': '&quot;',
-          "'": '&#39;'
+          '&': '&',
+          '<': '<',
+          '>': '>',
+          '"': '"',
+          "'": '''
         }[match];
       });
     }
 
-    // Add comment with sanitization and error handling
+    // Add comment function
     function addComment(event) {
       event.preventDefault();
       const nameInput = document.getElementById('name');
