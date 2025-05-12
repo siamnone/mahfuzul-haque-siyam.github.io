@@ -1,7 +1,8 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Md. Mahfuzul Haque Siyam | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
@@ -19,13 +20,33 @@
       background: #0e1e2a;
       color: #fff;
       padding: 40px 20px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      text-align: left;
     }
-    header h1 {
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #fff;
+      flex-shrink: 0;
+    }
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .header-text {
+      max-width: 600px;
+    }
+    .header-text h1 {
       font-size: 2.5rem;
       margin-bottom: 10px;
     }
-    header p {
+    .header-text p {
       font-size: 1.1rem;
       color: #ccc;
     }
@@ -85,55 +106,65 @@
 </head>
 <body>
   <header>
-    <h1>Md. Mahfuzul Haque Siyam</h1>
-    <p>Medical Laboratory Science Enthusiast | Researcher | Future Innovator</p>
-  </header>  <div class="container">
+    <div class="profile-pic">
+      <img src="profile.jpg" alt="Profile Picture" />
+    </div>
+    <div class="header-text">
+      <h1>Md. Mahfuzul Haque Siyam</h1>
+      <p>Medical Laboratory Science Enthusiast | Researcher | Future Innovator</p>
+    </div>
+  </header>
+
+  <div class="container">
     <div class="section about">
       <h2>About Me</h2>
       <p>I’m Md. Mahfuzul Haque Siyam, a passionate student of Laboratory Science at the Institute of Health Technology, Madaripur. I’m from Barishal and deeply dedicated to science, innovation, and medical research. My goal is to represent Bangladesh globally with my work.</p>
-    </div><div class="section achievements">
-  <h2>Achievements</h2>
-  <ul>
-    <li><strong>Diploma in Medical Laboratory Technology (Ongoing)</strong> – Institute of Health Technology, Madaripur</li>
-    <li><strong>Academic Merit Scholarships</strong> – Multiple recognitions for outstanding academic results</li>
-    <li><strong>National Science Fair Participation</strong> – Presented diagnostic innovation projects</li>
-    <li><strong>Website Developer</strong> – Created and published a personal academic website</li>
-    <li><strong>GitHub Profile Launch</strong> – <a href="https://github.com/siamnone" target="_blank">GitHub Profile</a></li>
-    <li><strong>Medical Camp Volunteer</strong> – Participated as a lab assistant in free health check-up events</li>
-  </ul>
-</div>
+    </div>
 
-<div class="section skills">
-  <h2>Skills</h2>
-  <ul>
-    <li><strong>Medical Laboratory Techniques</strong> – Blood tests, microscopy, diagnostics</li>
-    <li><strong>Computer & Technical</strong> – HTML, CSS, GitHub, Website Publishing, MS Word, PowerPoint</li>
-    <li><strong>Communication</strong> – Public speaking, medical report writing</li>
-    <li><strong>Teamwork & Leadership</strong> – Lead lab teams, collaborate well</li>
-    <li><strong>Language</strong> – Fluent in Bangla and English</li>
-    <li><strong>Health Innovation</strong> – Passionate about new medical technologies</li>
-  </ul>
-</div>
+    <div class="section achievements">
+      <h2>Achievements</h2>
+      <ul>
+        <li><strong>Diploma in Medical Laboratory Technology (Ongoing)</strong> – Institute of Health Technology, Madaripur</li>
+        <li><strong>Academic Merit Scholarships</strong> – Multiple recognitions for outstanding academic results</li>
+        <li><strong>National Science Fair Participation</strong> – Presented diagnostic innovation projects</li>
+        <li><strong>Website Developer</strong> – Created and published a personal academic website</li>
+        <li><strong>GitHub Profile Launch</strong> – <a href="https://github.com/siamnone" target="_blank">GitHub Profile</a></li>
+        <li><strong>Medical Camp Volunteer</strong> – Participated as a lab assistant in free health check-up events</li>
+      </ul>
+    </div>
 
-<div class="section certificate">
-  <h2>Certificate</h2>
-  <div class="certificate-box">
-    <img src="https://i.postimg.cc/t4W1FTsG/Wadhwani-Certificate-Md-Mahfuzul-Haque-Siyam.jpg" alt="Certificate of Completion">
-    <p><strong>JobReady Employability Skills</strong><br>
-    Wadhwani Foundation in collaboration with Brilliant Brains Valley<br>
-    Date: December 9, 2024</p>
+    <div class="section skills">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Medical Laboratory Techniques</strong> – Blood tests, microscopy, diagnostics</li>
+        <li><strong>Computer & Technical</strong> – HTML, CSS, GitHub, Website Publishing, MS Word, PowerPoint</li>
+        <li><strong>Communication</strong> – Public speaking, medical report writing</li>
+        <li><strong>Teamwork & Leadership</strong> – Lead lab teams, collaborate well</li>
+        <li><strong>Language</strong> – Fluent in Bangla and English</li>
+        <li><strong>Health Innovation</strong> – Passionate about new medical technologies</li>
+      </ul>
+    </div>
+
+    <div class="section certificate">
+      <h2>Certificates</h2>
+      <div class="certificate-box">
+        <img src="certificate.jpg" alt="Certificate of Completion">
+        <p><strong>JobReady Employability Skills</strong><br>
+        Wadhwani Foundation in collaboration with Brilliant Brains Valley<br>
+        Date: December 9, 2024</p>
+      </div>
+    </div>
+
+    <div class="section contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:mhseyam17@gmail.com">mhseyam17@gmail.com</a></p>
+      <p>Facebook: <a href="https://www.facebook.com/share/1FyA9bhBbV/" target="_blank">Facebook Profile</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/mahafuzulhaque2k22" target="_blank">LinkedIn Profile</a></p>
+      <p>Twitter: <a href="https://x.com/mahafuzulhaque7?t=smT7CFsvLpEbn0VQOKD8uA&s=09" target="_blank">Twitter (X)</a></p>
+    </div>
   </div>
-</div>
 
-<div class="section contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:mhseyam17@gmail.com">mhseyam17@gmail.com</a></p>
-  <p>Facebook: <a href="https://www.facebook.com/share/1FyA9bhBbV/" target="_blank">Facebook Profile</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/mahafuzulhaque2k22" target="_blank">LinkedIn Profile</a></p>
-  <p>Twitter: <a href="https://x.com/mahafuzulhaque7?t=smT7CFsvLpEbn0VQOKD8uA&s=09" target="_blank">Twitter (X)</a></p>
-</div>
-
-  </div>  <footer>
+  <footer>
     <p>&copy; 2025 Md. Mahfuzul Haque Siyam. All rights reserved.</p>
   </footer>
 </body>
