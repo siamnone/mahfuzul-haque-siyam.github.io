@@ -5,80 +5,100 @@
   <title>Md. Mahfuzul Haque Siyam</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #1f1c2c, #928dab);
-      background-attachment: fixed;
-      background-size: cover;
-      color: #f8f9fa;
-    }
-    header {
-      background: rgba(0, 0, 0, 0.7);
-      color: #ffffff;
-      padding: 60px 0;
-      text-align: center;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3em;
-    }
-    .section {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: auto;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 15px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-      margin-bottom: 40px;
-    }
-    .section h2 {
-      color: #f1c40f;
-      border-bottom: 2px solid #f1c40f;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
-    .contact, .social, .achievement {
-      margin-bottom: 40px;
-    }
-    .social a {
-      margin-right: 15px;
-      color: #00cec9;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-    .social a:hover {
-      color: #ffeaa7;
-    }
-    footer {
-      background: rgba(0, 0, 0, 0.8);
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+  color: #ecf0f1;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 80px 20px;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 20px #00fff7; }
+  to { box-shadow: 0 0 40px #00ffc3; }
+}
+
+header h1 {
+  font-size: 3em;
+  color: #00ffe7;
+  text-shadow: 0 0 20px #00ffe7;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #dff9fb;
+  margin-top: 10px;
+}
+
+.section {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  margin-bottom: 40px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.section h2 {
+  font-size: 2em;
+  color: #1abc9c;
+  border-bottom: 2px solid #1abc9c;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #00cec9;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffeaa7;
+}
+
+footer {
+  background: #000000b0;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #bdc3c7;
+  box-shadow: 0 -2px 15px rgba(0, 255, 255, 0.2);
+}
+
   </style>
 </head>
 <body><header>
   <h1>Md. Mahfuzul Haque Siyam</h1>
-  <p>Laboratory Science Student | Research Enthusiast | Future Innovator</p>
+  <p>Medical Lab Science Enthusiast | Researcher | Future Innovator</p>
 </header><div class="section about">
   <h2>About Me</h2>
-  <p>I’m Md. Mahfuzul Haque Siyam, a passionate student of Laboratory Science at the Institute of Health Technology, Madaripur. I’m from Barishal and deeply dedicated to research and science. I aim to make a significant contribution to the medical field and represent my country with pride.</p>
+  <p>I’m Md. Mahfuzul Haque Siyam, a passionate student of Laboratory Science at the Institute of Health Technology, Madaripur. I’m from Barishal and deeply dedicated to science, innovation, and medical research. My goal is to represent Bangladesh globally with my work.</p>
 </div><div class="section achievement">
   <h2>Achievements</h2>
-  <p>Certificates, publications, and recognitions will be displayed here soon.</p>
+  <p>Certificates, research papers, and notable contributions will appear here soon.</p>
 </div><div class="section contact">
   <h2>Contact Me</h2>
-  <p>Email: <a href="mailto:mhseyam17@gmail.com" style="color: #74b9ff; text-decoration: none;">mhseyam17@gmail.com</a></p>
+  <p>Email: <a href="mailto:mhseyam17@gmail.com">mhseyam17@gmail.com</a></p>
 </div><div class="section social">
-  <h2>Find Me Online</h2>
-  <a href="https://www.facebook.com/share/1FyA9bhBbV/" target="_blank">Facebook</a>
-  <a href="https://github.com/siamnone" target="_blank">GitHub</a>
-  <a href="https://www.linkedin.com/in/mahafuzulhaque2k22" target="_blank">LinkedIn</a>
+  <h2>Connect With Me</h2>
+  <a href="https://www.facebook.com/share/1FyA9bhBbV/" target="_blank">Facebook</a> |
+  <a href="https://github.com/siamnone" target="_blank">GitHub</a> |
+  <a href="https://www.linkedin.com/in/mahafuzulhaque2k22" target="_blank">LinkedIn</a> |
   <a href="https://x.com/mahafuzulhaque7?t=smT7CFsvLpEbn0VQOKD8uA&s=09" target="_blank">Twitter (X)</a>
 </div><footer>
   <p>&copy; 2025 Md. Mahfuzul Haque Siyam. All rights reserved.</p>
