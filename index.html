@@ -288,11 +288,10 @@
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-app.js";
     import { getFirestore, collection, addDoc, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-firestore.js";
-    // https://firebase.google.com/docs/web/setup#available-libraries
   </script>
 
   <script>
-    // Your web app's Firebase configuration
+    // Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyAbCcIn5KSxgRAHXCZUnh_kAJ1bNm",
       authDomain: "siyam-portfolio-comments.firebaseapp.com",
@@ -309,9 +308,14 @@
     // Function to add a comment
     document.getElementById('comment-form').addEventListener('submit', async (e) => {
       e.preventDefault();
-      const name = document.getElementById('name').value;
-      const comment = document.getElementById('comment').value;
+      const name = document.getElementById('name').value.trim();
+      const comment = document.getElementById('comment').value.trim();
       const timestamp = new Date().toLocaleString();
+
+      if (!name || !comment) {
+        alert("Please fill in both name and comment fields.");
+        return;
+      }
 
       try {
         await addDoc(collection(db, 'comments'), {
@@ -323,6 +327,7 @@
         loadComments();
       } catch (error) {
         console.error("Error adding comment: ", error);
+        alert("Failed to add comment. Please try again later.");
       }
     });
 
@@ -331,17 +336,27 @@
       const commentsList = document.getElementById('comments-list');
       commentsList.innerHTML = ''; // Clear existing comments
 
+      if (!db) {
+        commentsList.innerHTML = '<p>Error: Database not initialized.</p>';
+        return;
+      }
+
       try {
         const q = query(collection(db, 'comments'), orderBy('timestamp', 'desc'));
         const querySnapshot = await getDocs(q);
-        querySnapshot.forEach((doc) => {
-          const data = doc.data();
-          const commentElement = document.createElement('p');
-          commentElement.innerHTML = <strong>${data.name}</strong>: ${data.comment} - ${data.timestamp};
-          commentsList.appendChild(commentElement);
-        });
+        if (querySnapshot.empty) {
+          commentsList.innerHTML = '<p>No comments yet.</p>';
+        } else {
+          querySnapshot.forEach((doc) => {
+            const data = doc.data();
+            const commentElement = document.createElement('p');
+            commentElement.innerHTML = <strong>${data.name}</strong>: ${data.comment} - ${data.timestamp};
+            commentsList.appendChild(commentElement);
+          });
+        }
       } catch (error) {
         console.error("Error loading comments: ", error);
+        commentsList.innerHTML = '<p>Error loading comments. Please try again later.</p>';
       }
     }
 
