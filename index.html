@@ -269,19 +269,84 @@
 
   <div class="comment-section">
     <h2>Leave a Comment</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <textarea placeholder="Your Comment" required></textarea>
+    <form id="comment-form">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <textarea id="comment" placeholder="Your Comment" required></textarea>
       <button type="submit">Submit Comment</button>
     </form>
-    <div class="comments-list">
-      <!-- Static example comment (you can add more manually) -->
-      <p><strong>John Doe</strong>: Great portfolio! Keep up the good work! - May 13, 2025</p>
+    <div class="comments-list" id="comments-list">
+      <!-- Comments will be dynamically loaded here -->
     </div>
   </div>
 
   <footer>
     <p>© 2025 Md. Mahfuzul Haque Siyam. All rights reserved.</p>
   </footer>
+
+  <!-- Firebase SDK -->
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-app.js";
+    import { getFirestore, collection, addDoc, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-firestore.js";
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  </script>
+
+  <script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAbCcIn5KSxgRAHXCZUnh_kAJ1bNm",
+      authDomain: "siyam-portfolio-comments.firebaseapp.com",
+      projectId: "siyam-portfolio-comments",
+      storageBucket: "siyam-portfolio-comments.appspot.com",
+      messagingSenderId: "775765258846",
+      appId: "1:775765258846:web:abc84f3d59986c73a86f"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // Function to add a comment
+    document.getElementById('comment-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const comment = document.getElementById('comment').value;
+      const timestamp = new Date().toLocaleString();
+
+      try {
+        await addDoc(collection(db, 'comments'), {
+          name: name,
+          comment: comment,
+          timestamp: timestamp
+        });
+        document.getElementById('comment-form').reset();
+        loadComments();
+      } catch (error) {
+        console.error("Error adding comment: ", error);
+      }
+    });
+
+    // Function to load comments
+    async function loadComments() {
+      const commentsList = document.getElementById('comments-list');
+      commentsList.innerHTML = ''; // Clear existing comments
+
+      try {
+        const q = query(collection(db, 'comments'), orderBy('timestamp', 'desc'));
+        const querySnapshot = await getDocs(q);
+        querySnapshot.forEach((doc) => {
+          const data = doc.data();
+          const commentElement = document.createElement('p');
+          commentElement.innerHTML = <strong>${data.name}</strong>: ${data.comment} - ${data.timestamp};
+          commentsList.appendChild(commentElement);
+        });
+      } catch (error) {
+        console.error("Error loading comments: ", error);
+      }
+    }
+
+    // Load comments when the page loads
+    loadComments();
+  </script>
 </body>
 </html>
