@@ -8,8 +8,8 @@
   <meta name="author" content="Md. Mahfuzul Haque Siyam" />
   <meta property="og:title" content="Md. Mahfuzul Haque Siyam | Portfolio" />
   <meta property="og:description" content="Explore the portfolio of Md. Mahfuzul Haque Siyam, a passionate Medical Laboratory Science student and researcher." />
-  <meta property="og:image" content="https://www.dropbox.com/scl/fi/fguj9jg95agwp35gfli74/profile.jpj.jpg?rlkey=e8ta4xwm6mhsy4g4xp7wigvsh&st=uim6i1c2&dl=1 />
-  <meta property="og:url" content="https://yourwebsite.com" />
+  <meta property="og:image" content="https://siamnone.github.io/portfolio/profile.jpg" />
+  <meta property="og:url" content="https://siamnone.github.io/portfolio" />
   <title>Md. Mahfuzul Haque Siyam | Portfolio</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
@@ -23,6 +23,7 @@
       font-family: 'Orbitron', sans-serif;
       background: #f7f9fc;
       color: #333;
+      text-align: center;
     }
     header {
       background: #0e1e2a;
@@ -33,7 +34,6 @@
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
-      position: relative;
     }
     .profile-pic {
       width: 160px;
@@ -43,7 +43,6 @@
       border: 5px solid #fff;
       flex-shrink: 0;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      z-index: 1;
     }
     .profile-pic:hover {
       transform: scale(1.1);
@@ -85,72 +84,11 @@
     }
     .section ul {
       padding-left: 20px;
+      text-align: left;
     }
     .section li {
       margin-bottom: 10px;
       line-height: 1.6;
-    }
-    .certificate-box {
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 20px;
-      background: #f0f0f0;
-      text-align: center;
-    }
-    .certificate-box img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.15);
-    }
-    .comment-section {
-      margin-top: 40px;
-    }
-    .comment-form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .comment-form div {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-    }
-    .comment-form label {
-      font-size: 1rem;
-      color: #333;
-    }
-    .comment-form input,
-    .comment-form textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1rem;
-    }
-    .comment-form button {
-      padding: 10px;
-      background-color: #0e76a8;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .comment-form button:hover {
-      background-color: #094a66;
-    }
-    .comment-list {
-      margin-top: 20px;
-    }
-    .comment {
-      padding: 15px;
-      background: #f0f0f0;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
-    .comment strong {
-      color: #0e76a8;
     }
     footer {
       background: #0e1e2a;
@@ -165,16 +103,6 @@
     }
     a:hover {
       text-decoration: underline;
-    }
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      border: 0;
     }
     @media (max-width: 768px) {
       header {
@@ -191,13 +119,6 @@
       .header-text p {
         font-size: 1rem;
       }
-      .container {
-        padding: 15px;
-        margin: 20px 10px;
-      }
-      .section h2 {
-        font-size: 1.5rem;
-      }
     }
     @media (max-width: 480px) {
       .profile-pic {
@@ -210,19 +131,13 @@
       .header-text p {
         font-size: 0.9rem;
       }
-      .section li {
-        font-size: 0.9rem;
-      }
-      .certificate-box {
-        padding: 15px;
-      }
     }
   </style>
 </head>
 <body>
   <header>
     <div class="profile-pic">
-      <img src="profile.jpg" alt="Profile picture of Md. Mahfuzul Haque Siyam" />
+      <img src="https://siamnone.github.io/portfolio/profile.jpg" alt="Profile picture of Md. Mahfuzul Haque Siyam" />
     </div>
     <div class="header-text">
       <h1>Md. Mahfuzul Haque Siyam</h1>
@@ -243,7 +158,7 @@
         <li><strong>Academic Merit Scholarships</strong> – Multiple recognitions for outstanding academic results</li>
         <li><strong>National Science Fair Participation</strong> – Presented diagnostic innovation projects</li>
         <li><strong>Website Developer</strong> – Created and published a personal academic website</li>
-        <li><strong>GitHub Profile Launch</strong> – <a href="https://github.com/siamnone" target="_blank" rel="noopener">GitHub Profile<span class="sr-only"> (opens in a new tab)</span></a></li>
+        <li><strong>GitHub Profile Launch</strong> – <a href="https://github.com/siamnone" target="_blank">GitHub Profile</a></li>
         <li><strong>Medical Camp Volunteer</strong> – Participated as a lab assistant in free health check-up events</li>
       </ul>
     </div>
@@ -260,87 +175,17 @@
       </ul>
     </div>
 
-    <div class="section certificate">
-      <h2>Certificates</h2>
-      <div class="certificate-box">
-        <img src="certificate.jpg" alt="Certificate of Completion for JobReady Employability Skills from Wadhwani Foundation" loading="lazy">
-        <p><strong>JobReady Employability Skills</strong><br>
-        Wadhwani Foundation in collaboration with Brilliant Brains Valley<br>
-        Date: December 9, 2024</p>
-      </div>
-    </div>
-
     <div class="section contact">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:mhseyam17@gmail.com">mhseyam17@gmail.com</a></p>
-      <p>Facebook: <a href="https://www.facebook.com/share/1FyA9bhBbV/" target="_blank" rel="noopener">Facebook Profile<span class="sr-only"> (opens in a new tab)</span></a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/mahafuzulhaque2k22" target="_blank" rel="noopener">LinkedIn Profile<span class="sr-only"> (opens in a new tab)</span></a></p>
-      <p>Twitter: <a href="https://x.com/mahafuzulhaque7?t=smT7CFsvLpEbn0VQOKD8uA&s=09" target="_blank" rel="noopener">Twitter (X)<span class="sr-only"> (opens in a new tab)</span></a></p>
-    </div>
-
-    <div class="section comment-section">
-      <h2Cuba Libre
-      <h2>Leave a Comment</h2>
-      <form class="comment-form" onsubmit="addComment(event)">
-        <div>
-          <label for="name">Your Name</label>
-          <input type="text" id="name" placeholder="Your Name" required />
-        </div>
-        <div>
-          <label for="comment">Your Comment</label>
-          <textarea id="comment" rows="4" placeholder="Your Comment" required></textarea>
-        </div>
-        <button type="submit">Post Comment</button>
-      </form>
-      <div class="comment-list" id="comment-list"></div>
+      <p>Facebook: <a href="https://www.facebook.com/share/1FyA9bhBbV/" target="_blank">Facebook Profile</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/mahafuzulhaque2k22" target="_blank">LinkedIn Profile</a></p>
+      <p>Twitter: <a href="https://x.com/mahafuzulhaque7?t=smT7CFsvLpEbn0VQOKD8uA&s=09" target="_blank">Twitter (X)</a></p>
     </div>
   </div>
 
   <footer>
-    <p>© <span id="current-year"></span> Md. Mahfuzul Haque Siyam. All rights reserved.</p>
+    <p>© 2025 Md. Mahfuzul Haque Siyam. All rights reserved.</p>
   </footer>
-
-  <script>
-    // Set current year in footer
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-
-    // Sanitize HTML input
-    function escapeHTML(str) {
-      return str.replace(/[&<>"']/g, function(match) {
-        return {
-          '&': '&',
-          '<': '<',
-          '>': '>',
-          '"': '"',
-          "'": '''
-        }[match];
-      });
-    }
-
-    // Add comment function
-    function addComment(event) {
-      event.preventDefault();
-      const nameInput = document.getElementById('name');
-      const commentInput = document.getElementById('comment');
-      const commentList = document.getElementById('comment-list');
-
-      if (!nameInput || !commentInput || !commentList) {
-        console.error('Required DOM elements are missing.');
-        return;
-      }
-
-      const name = escapeHTML(nameInput.value.trim());
-      const comment = escapeHTML(commentInput.value.trim());
-
-      if (name && comment) {
-        const commentBox = document.createElement('div');
-        commentBox.className = 'comment';
-        commentBox.innerHTML = <strong>${name}:</strong><br>${comment};
-        commentList.prepend(commentBox);
-        nameInput.value = '';
-        commentInput.value = '';
-      }
-    }
-  </script>
 </body>
 </html>
